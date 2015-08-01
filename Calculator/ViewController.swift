@@ -50,8 +50,9 @@ class ViewController: UIViewController {
             enter()
         }
     }
-    
-    func performOperation(operation: Double -> Double) {
+  
+  // make private otherwise this http://stackoverflow.com/questions/29457720/compiler-error-method-with-objective-c-selector-conflicts-with-previous-declara
+    private func performOperation(operation: Double -> Double) {
         if (operandStack.count >= 1) {
             displayValue = operation(operandStack.removeLast())
             enter()
